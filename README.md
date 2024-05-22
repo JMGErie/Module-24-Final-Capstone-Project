@@ -1,5 +1,5 @@
 # capestone_final
-# Caperstone
+
 Predicting steel yeild strength, tensile strength and elongation.
 
 Steel: A Vital Material and the Importance of Predicting its Properties
