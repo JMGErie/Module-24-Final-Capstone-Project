@@ -33,6 +33,7 @@ I built a simple Random Forest model first then built a second one with Grid Sea
 - The 3 most important features were: ti: 0.406, si: 0.071, and al: 0.059
 - Yield Strength Partial Dependence Plots showed strong partial dependence on ti with sharp rise between 0.5 and 2; al between 0 and 1.25, and c between 0.2 and 0.25.
 The Grid Search improved the Random Forest Regressor model by finding the optimal hyperparameters, resulting in a high percentage of accurate predictions within 10% of the actual values for yield strength, tensile strength, and elongation.
+![Plot](https://github.com/JMGErie/Module-24-Final-Capstone-Project/blob/main/Partial%20dependence%20plot.png)
 
 #### Linear Regression with Polynomial Features and Ridge Regularization
 The Linear Regression model with Polynomial Features and Ridge Regularization achieved the following results:
@@ -56,6 +57,8 @@ The XGBoost model achieved the following results:
 - Based on the SHAP plot, Titanium (ti), carbon (c), and aluminum (al) appear to be the most important features, as they have the widest distributions and the highest SHAP values. Their values tend to increase the predicted yield strength, while low values tend to decrease it.
 - The 3 most important features were ti: 0.469, mn: 0.149, and al: 0.054
 The XGBoost model performed on par with the Random Forest Regressor in predicting the yield strength of steel accurately.
+![Plot](https://github.com/JMGErie/Module-24-Final-Capstone-Project/blob/main/SHAP.png)
+![Plot](https://github.com/JMGErie/Module-24-Final-Capstone-Project/blob/main/error%20graph.JPG)
 
 #### Support Vector Regression
 The Support Vector Regression model achieved the following results:
@@ -66,11 +69,13 @@ The Support Vector Regression model achieved the following results:
 The Support Vector Regression model performed reasonably well but did not achieve the same level of accuracy as the Random Forest Regressor or the XGBoost model in predicting the yield strength of steel.
 
 ### Conclusion
-Based on the results, the Random Forest Regression model with Grid Search performed the best in predicting the yield strength, tensile strength, and elongation of steel, with a high percentage of accurate predictions within 10% of the actual values. The XGBoost model also performed well in predicting the yield strength, achieving similar accuracy to the Random Forest Regressor. The Linear Regression model with Polynomial Features and Ridge Regularization showed promising results for yield strength prediction, while the Deep Neural Network and Support Vector Regression models did not perform as well as the other models.
+Based on the results, the Random Forest Regression model with Grid Search predictions yilded the lowest Mean Squared Error for the prediction of yield strength of steel, with a high percentage of accurate predictions within 10% of the actual values. Upon further analysis, The XGBoost model performed better in predicting the yield strength because the error distribution was much tighter than the Random Forest Regressor. The Linear Regression model with Polynomial Features and Ridge Regularization showed promising results for yield strength prediction, while the Deep Neural Network and Support Vector Regression models did not perform as well as the other models.
 It's important to note although Random Forest Regressor performed the best, it may be more difficult to use this model to predict or interpolate data for future prediction. In that instance it seems like XGBoost may be the best predictor.
 Continuous refinement and exploration of different modeling techniques, along with the integration of additional relevant features, could further improve the accuracy of predicting steel properties.
 
 Overall, this project highlights the potential importance machine learning can play in predicting materials properties accurately using techniques such as linear regression, deep neural networks, and ensemble methods like Random Forest Regression and XGBoost.
+
+![Plot](https://github.com/JMGErie/Module-24-Final-Capstone-Project/blob/main/model%20prediction%20errors%20Vs%20models.png)
 
 #### Next steps
 The current models were built on solely composition/elemental data. There are many factors that come into play when it comes to yield strength such as manufacturing process parameters (e.g., rolling conditions, heat treatment), microstructural features (e.g., grain size, phase fractions), environmental conditions during service (e.g., temperature, pressure). Incorporating these features would make more wholesome predictive models. Once a final model is built, I would:
