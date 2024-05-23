@@ -21,15 +21,17 @@ In addition to the model MSE, I set an artificial Pass/Fail criteria, for engine
 ### Results
 
 #### Random Forest Regression with Grid Search
-The Random Forest Regression model with Grid Search achieved the following results:
+I built a simple Random Forrest model first then built a second one with with Grid Search achieved the in hope to get better results:
 - Best Parameters: {'max_depth': 10, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 100}
-- Best Score (Negative Mean Squared Error): -21222.820554471615
-- Grid Search CV Random Forest Regressor Mean Squared Error (Test set) for Yield Strength: 13226.23401298962
+- Simple Random Forrest REgressor model's Mean Squared Error (Test set): 11919.871524698427
+- Grid Search CV Random Forest Regressor Mean Squared Error (Test set) for Yield Strength: 11652.939349206372
 - Percentage of Yield Strength Grid Search Random Forest Predictions within 10% of Actual Value: 96.47%
 - Random Forest Regressor Mean Squared Error for Tensile Strength: 11157.12503723807
 - Percentage of Random Forest Tensile Strength Predictions within 10% of Actual: 93.91%
 - Random Forest Regressor Mean Squared Error for Elongation: 16.712264606557383
 - Percentage of Random Forest Elongation Predictions within 10% of Actual: 72.61%
+- The 3 most important features were: ti: 0.406, si: 0.071, and al: 0.059
+- Yield Strngth Partial Dependance Plots showed strong partial dependance on ti with sharp rise between 0.5 and 2; al between 0 and 1.25, and c between 0.2 and 0.25.
 The Grid Search improved the Random Forest Regressor model by finding the optimal hyperparameters, resulting in a high percentage of accurate predictions within 10% of the actual values for yield strength, tensile strength, and elongation.
 
 #### Linear Regression with Polynomial Features and Ridge Regularization
@@ -51,6 +53,8 @@ The Deep Neural Network model did not perform as well as the Random Forest Regre
 The XGBoost model achieved the following results:
 - XGBoost Mean Squared Error for Yield Strength: 18539.889298940114
 - Percentage of Yield Strength Predictions within 10% of Actual Value: 96.47%
+- Based on the SHAP plot, Titanium (ti), carbon (c), and aluminum (al) appear to be the most important features, as they have the widest distributions and the highest SHAP values. Their values tend to increase the predicted yield strength, while low values tend to decrease it.
+- the 3 most important features were ti: 0.469, mn: 0.149, and al: 0.054
 The XGBoost model performed on par with the Random Forest Regressor in predicting the yield strength of steel accurately.
 
 #### Support Vector Regression
