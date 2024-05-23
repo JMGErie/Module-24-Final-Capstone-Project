@@ -11,10 +11,10 @@ Researchers continue to explore and develop steel alloys with new compositions a
 This project aims to develop predictive models for estimating the yield strength, tensile strength, and elongation of steel based on its chemical composition and other relevant factors. 
 
 ### Data Source
-https://ml.materialsproject.org/projects/matbench_steels)
+https://ml.materialsproject.org/projects/matbench_steels
 
 ### Methodology
-The code provided used the steel dataset from materialsproject.org (https://ml.materialsproject.org/projects/matbench_steels) demonstrates various approaches, including Random Forest Regression, Linear Regression with Polynomial Features and Ridge Regularization, Deep Neural Networks, XGBoost, and Support Vector Regression.
+As mentioned above, I used the stell strngth data set from (https://ml.materialsproject.org/projects/matbench_steels) which contains compositional information for 312 alloys and their yield strangth, tensile strength and elongation. The code provided used the steel dataset from materialsproject.org demonstrates various approaches, including Random Forest Regression, Linear Regression with Polynomial Features and Ridge Regularization, Deep Neural Networks, XGBoost, and Support Vector Regression.
 
 In addition to the model MSE, I set an artificial Pass/Fail criteria, for engineering purposes, of 10% allowable error for each prediction error (_preds_% columns). The reasons for this is in the real world, these values typically have a range to account for various measurements error and otyher variations. This value could easliy be chnaged to any other values.
 
