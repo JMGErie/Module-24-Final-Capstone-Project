@@ -82,8 +82,8 @@ The current models were built on solely composition/elemental data. There are ma
 
 #### Outline of project
 
-- [Link to notebook 1]()
-- [Link to notebook 2]()
+- [Model Development Notebook](https://github.com/JMGErie/Module-24-Final-Capstone-Project/blob/main/steel_2.ipynb)
+- [XGBoost Yield Strength Prediction]()
 - [Link to notebook 3]()
 
 ##### Contact and Further Information
