@@ -69,12 +69,13 @@ The Support Vector Regression model achieved the following results:
 The Support Vector Regression model performed reasonably well but did not achieve the same level of accuracy as the Random Forest Regressor or the XGBoost model in predicting the yield strength of steel.
 
 ### Conclusion
-Based on the results, the Random Forest Regression model with Grid Search predictions yilded the lowest Mean Squared Error for the prediction of yield strength of steel, with a high percentage of accurate predictions within 10% of the actual values. Upon further analysis, The XGBoost model performed better in predicting the yield strength because the error distribution was much tighter than the Random Forest Regressor. The Linear Regression model with Polynomial Features and Ridge Regularization showed promising results for yield strength prediction, while the Deep Neural Network and Support Vector Regression models did not perform as well as the other models.
+As represented int the summary table and box plots below, the Random Forest Regression model with Grid Search predictions yilded the lowest Mean Squared Error for the prediction of yield strength of steel, with a high percentage of accurate predictions within 10% of the actual values. Upon further analysis, The XGBoost model performed better in predicting the yield strength because the error distribution was much tighter than the Random Forest Regressor. The Linear Regression model with Polynomial Features and Ridge Regularization showed promising results for yield strength prediction, while the Deep Neural Network and Support Vector Regression models did not perform as well as the other models.
 It's important to note although Random Forest Regressor performed the best, it may be more difficult to use this model to predict or interpolate data for future prediction. In that instance it seems like XGBoost may be the best predictor.
 Continuous refinement and exploration of different modeling techniques, along with the integration of additional relevant features, could further improve the accuracy of predicting steel properties.
 
 Overall, this project highlights the potential importance machine learning can play in predicting materials properties accurately using techniques such as linear regression, deep neural networks, and ensemble methods like Random Forest Regression and XGBoost.
 
+![Plot](https://github.com/JMGErie/Module-24-Final-Capstone-Project/blob/main/model%20perforamce%20table)
 ![Plot](https://github.com/JMGErie/Module-24-Final-Capstone-Project/blob/main/model%20prediction%20errors%20Vs%20models.png)
 
 #### Next steps
