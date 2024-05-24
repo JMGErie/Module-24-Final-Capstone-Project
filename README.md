@@ -1,5 +1,5 @@
-## Yield and Tensile Strengths Machine Learning Prediction of Fe (Steel) Alloys
-
+## Machine Learning Prediction ofYield and Tensile Strengths of Fe (Steel) Alloys
+By Jean-Marie Erie
 ### Executive summary
 Steel, one of the oldest known materials to mankind, remains a vital material both technologically and economically. Researchers, scientists, and engineers continue to study and synthesize new alloys with unique properties for diverse advanced applications and environments. Machine learning, with its ability to apply complex statistical calculations, offers efficient and sometimes precise ways to predict properties of the materials based on myriad features, which would have been almost impossible using the conventional Monte Carlo simulation methods. In this project, I used Random Forest Regression, Linear Regression with Polynomial Features and Ridge Regularization, Deep Neural Networks, XGBoost, and Support Vector Regression models to predict the yield and tensile strengths of steel using the alloy's compositions as features. The two ensemble techniques used: Random Forest and XGBoost Regressors produced the lowest mean square errors and the overall best results. 
 
